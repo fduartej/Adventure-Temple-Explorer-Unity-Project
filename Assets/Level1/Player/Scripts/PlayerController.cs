@@ -19,11 +19,17 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Movement(){
-        //Cambiar la Mirada
-        if (Input.GetKey(KeyCode.RightArrow)) gameObject.GetComponent<SpriteRenderer>().flipX = false;
-        if (Input.GetKey(KeyCode.LeftArrow))  gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-        transform.position += move * Time.deltaTime * playerSpeed;
+        //Cambiar de animacion
+        if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow)){
+            gameObject.GetComponent<Animator>().SetBool("running", false);
+        }else{
+            //Cambiar la Mirada
+            if (Input.GetKey(KeyCode.RightArrow)) gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            if (Input.GetKey(KeyCode.LeftArrow))  gameObject.GetComponent<SpriteRenderer>().flipX = true;
+
+            gameObject.GetComponent<Animator>().SetBool("running", true);
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+            transform.position += move * Time.deltaTime * playerSpeed;
+        }
     }
 }
