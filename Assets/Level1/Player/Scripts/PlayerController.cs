@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float playerSpeed=15f;
+    public float jumpForce = 300f;
+    public bool isGrounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,29 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Jump(){
-        
+        if(isGrounded){
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)){
+                gameObject.GetComponent<Rigidbody2D>().
+                    AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Floor")
+        {
+            isGrounded = true;
+        }
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Floor")
+        {
+            isGrounded = false;
+        }
     }
 
 }

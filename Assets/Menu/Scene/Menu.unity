@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 15
+  isGrounded: 0
 --- !u!95 &257144186
 Animator:
   serializedVersion: 3
@@ -319,7 +320,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &334878224
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,8 +334,8 @@ GameObject:
   - component: {fileID: 334878226}
   - component: {fileID: 334878228}
   m_Layer: 0
-  m_Name: Tilemap
-  m_TagString: Untagged
+  m_Name: TilemapPlatform
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7814,7 +7815,7 @@ GameObject:
   - component: {fileID: 1463009277}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
