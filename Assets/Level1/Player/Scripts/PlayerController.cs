@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Jump();
         Movement();
     }
 
@@ -26,10 +27,14 @@ public class PlayerController : MonoBehaviour
             //Cambiar la Mirada
             if (Input.GetKey(KeyCode.RightArrow)) gameObject.GetComponent<SpriteRenderer>().flipX = false;
             if (Input.GetKey(KeyCode.LeftArrow))  gameObject.GetComponent<SpriteRenderer>().flipX = true;
-
             gameObject.GetComponent<Animator>().SetBool("running", true);
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
             transform.position += move * Time.deltaTime * playerSpeed;
         }
     }
+
+    private void Jump(){
+        
+    }
+
 }
