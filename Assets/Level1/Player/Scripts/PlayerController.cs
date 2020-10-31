@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 300f;
     public bool isGrounded = false;
 
+    public bool isMushroom = false;
+
     // Start is called before the first frame update
     void Start()
     {

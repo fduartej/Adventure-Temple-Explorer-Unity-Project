@@ -37,6 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Level1\Player\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Level1\Script\CounterManager.cs" />
+     <Compile Include="Assets\Level1\Script\DoorController.cs" />
+     <Compile Include="Assets\Level1\Script\MushroomController.cs" />
      <Compile Include="Assets\Menu\Scripts\MenuController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
