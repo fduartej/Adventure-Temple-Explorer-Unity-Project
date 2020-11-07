@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     public bool isMushroom = false;
 
+    public CounterManager counter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,10 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.tag == "Floor")
         {
             isGrounded = true;
+        }
+        if (collision.collider.tag == "Enemy")
+        {
+            counter.removeLives();
         }
 
     }

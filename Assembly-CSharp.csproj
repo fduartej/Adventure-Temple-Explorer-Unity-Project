@@ -36,6 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Level1\Enemy\Script\EnemyMove.cs" />
+     <Compile Include="Assets\Level1\Enemy\Script\EnemySpawner.cs" />
      <Compile Include="Assets\Level1\Player\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Level1\Script\CounterManager.cs" />
      <Compile Include="Assets\Level1\Script\DoorController.cs" />

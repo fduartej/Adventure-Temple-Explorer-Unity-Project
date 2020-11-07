@@ -36,6 +36,9 @@ public class CounterManager : MonoBehaviour
 
     public void removeLives(){
         lives--;
+        if (lives == 0){
+            Debug.Log("Contiuar o Cerrar el juego");
+        }
         textLivesScore.text = lives.ToString();
     }
 
